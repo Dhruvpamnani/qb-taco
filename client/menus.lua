@@ -199,26 +199,28 @@ exports['qb-menu']:openMenu({
     })
 end)
 
-RegisterNetEvent("qb-taco:bill")
-AddEventHandler("qb-taco:bill", function()
-    local bill = exports["nh-keyboard"]:KeyboardInput({
-        header = "Create Receipt",
-        rows = {
+-- Register Stuff --
+RegisterNetEvent("qb-taco:bill", function()
+    local dialog = exports['qb-input']:ShowInput({
+        header = "Till",
+        submitText = "Bill Person",
+        inputs = {
             {
-                id = 0,
-                txt = "Server ID"
+                type = 'number',
+                isRequired = true,
+                name = 'id',
+                text = 'paypal id'
             },
             {
-                id = 1,
-                txt = "Amount"
+                type = 'number',
+                isRequired = true,
+                name = 'amount',
+                text = '$ amount!'
             }
         }
     })
-    if bill ~= nil then
-        if bill[1].input == nil or bill[2].input == nil then 
-            return 
-        end
-        TriggerServerEvent("qb-taco:bill:player", bill[1].input, bill[2].input)
+    if dialog then
+        if not dialog.id or not dialog.amount then return end
+        TriggerServerEvent(qb-taco:bill:player", dialog.id, dialog.amount)
     end
 end)
-
