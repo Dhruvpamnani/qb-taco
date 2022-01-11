@@ -10,7 +10,7 @@ qb-target - https://github.com/BerkieBb/qb-target
 
 qb-menu - https://github.com/qbcore-framework/qb-menu
 
-nh-keyboard - https://github.com/nerohiro/nh-keyboard
+qb-input - https://github.com/qbcore-framework/qb-input
 
 mlo - https://www.gta5-mods.com/maps/taco-restaurant-mlo-add-on-fivem-pablitomamutopaputo
 
