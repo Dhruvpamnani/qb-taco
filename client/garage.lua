@@ -1,6 +1,6 @@
 PlayerData = {}
 local pedspawned = false
-
+local QBCore = exports['qb-core']:GetCoreObject()
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function(Player)
     	PlayerData =  QBCore.Functions.GetPlayerData()
