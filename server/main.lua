@@ -1,3 +1,5 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+
 RegisterServerEvent("qb-taco:bill:player")
 AddEventHandler("qb-taco:bill:player", function(playerId, amount)
         local biller = QBCore.Functions.GetPlayer(source)
