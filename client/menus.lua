@@ -221,6 +221,6 @@ RegisterNetEvent("qb-taco:bill", function()
     })
     if dialog then
         if not dialog.id or not dialog.amount then return end
-        TriggerServerEvent(qb-taco:bill:player", dialog.id, dialog.amount)
+        TriggerServerEvent("qb-taco:bill:player", dialog.id, dialog.amount)
     end
 end)
